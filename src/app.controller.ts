@@ -12,8 +12,9 @@ export class AppController {
    */
   @Get()
   @Header('Cache-Control', 'none')
-  getHello(): string {
-    return this.appService.getHello();
+  @Redirect('http://localhost:3000/swagger')
+  getHello(): void {
+    return
   }
 
   /**
